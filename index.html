@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b14">
+<title>الظفيري ستور | متجر القيمنق</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- شريط الإعلانات العلوي -->
+<div class="announcement-bar">
+  <span>⚡ شحن سريع لجميع مناطق المملكة | استخدم كود (FALCON) لتخفيض إضافي ⚡</span>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" style="color:inherit;text-decoration:none"><span class="brand-mark">🎮</span><span>الظفيري ستور</span></a>
+    <nav class="navlinks"><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#why-us">مميزاتنا</a></nav>
+    <div class="nav-actions">
+      <input class="search" id="search" type="search" placeholder="ابحث عن منتج..." aria-label="ابحث عن منتج">
+      <button class="btn cart-button" id="openCart">🛒 السلة <span class="count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- القسم الرئيسي -->
+  <section class="hero" id="home">
+    <div class="hero-box">
+      <div class="hero-copy">
+        <span class="eyebrow">⚡ عالم القيمنق يبدأ هنا</span>
+        <h1>ارفع مستوى<br>تجربتك في القيمنق</h1>
+        <p>اكتشف أجهزة الألعاب والإكسسوارات التي تناسب إعدادك، واجعل كل جلسة لعب تجربة مختلفة.</p>
+        <a class="btn" href="#products" style="display:inline-block;text-decoration:none">تسوق المنتجات ←</a>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="controller"></div></div>
+    </div>
+  </section>
+
+  <!-- شبكة المنتجات -->
+  <section id="products">
+    <div class="section-head"><div><h2>منتجات مختارة</h2><p>اختر تجهيزاتك وابدأ اللعب</p></div><span style="color:var(--muted);font-size:.9rem" id="productCount"></span></div>
+    <div class="filters" id="filters">
+      <button class="filter active" data-category="الكل">الكل</button>
+      <button class="filter" data-category="أجهزة">أجهزة</button>
+      <button class="filter" data-category="إكسسوارات">إكسسوارات</button>
+      <button class="filter" data-category="كمبيوتر">كمبيوتر</button>
+    </div>
+    <div class="products" id="productsGrid"></div>
+  </section>
+
+  <!-- صفحة تفاصيل المنتج (مخفية افتراضياً) -->
+  <section id="productDetails" style="display: none; padding: 40px 0;">
+    <button class="btn" id="backToHome" style="margin-bottom: 20px;">← العودة للمنتجات</button>
+    <div id="detailsContent" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: var(--panel); border: 1px solid var(--line); border-radius: 24px; padding: 30px; align-items: center;"></div>
+    
+    <!-- قسم المنتجات المقترحة -->
+    <div style="margin-top: 50px;">
+      <h3 style="margin-bottom: 20px;">منتجات قد تعجبك أيضاً 🎮</h3>
+      <div class="products" id="relatedProductsGrid"></div>
+    </div>
+  </section>
+
+  <!-- قسم آراء العملاء -->
+  <section style="margin: 60px 0;">
+    <div class="section-head"><div><h2>آراء الجيمرز</h2><p>ماذا قال عنا عملاؤنا المميزون؟</p></div></div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"توصيل صاروخي والمنتجات أصلية ومغلفة تماماً. أفضل متجر قيمنق تعاملت معه!"</p>
+        <strong>- سلطان الشمري</strong>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"الأسعار جبارة مقارنة بالسوق، وخدمة العملاء متجاوبين جداً. أنصح فيه بقوة."</p>
+        <strong>- نايف العنزي</strong>
+      </div>
+      <div class="review-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"طلبت كيبورد وماوس باد، الجودة تفوق الخيال وإضاءة الـ RGB تفوز."</p>
+        <strong>- فيصل الدوسري</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- مميزات المتجر -->
+  <section id="why-us">
+    <div class="section-head"><div><h2>تجربة تسوق أسهل</h2><p>كل ما تحتاجه لإعداد قيمنق متكامل</p></div></div>
+    <div class="perks">
+      <div class="perk"><div class="perk-icon">🚚</div><div><strong>توصيل مريح</strong><span>أضف المنتجات إلى سلتك بسهولة</span></div></div>
+      <div class="perk"><div class="perk-icon">🔒</div><div><strong>تجربة واضحة</strong><span>تفاصيل المنتجات والأسعار أمامك</span></div></div>
+      <div class="perk"><div class="perk-icon">🎧</div><div><strong>معدات متنوعة</strong><span>خيارات للأجهزة والإكسسوارات</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>🎮 الظفيري ستور — متجر القيمنق الأول</span>
+    <div class="payment-icons">
+      <span>💳 مدى</span> | <span>🍏 Apple Pay</span> | <span>💳 Visa</span> | <span>🟢 تابي</span>
+    </div>
+  </div>
+  <div class="wrap note">© <span id="year"></span> جميع الحقوق محفوظة لـ الظفيري ستور. هذه نسخة تجريبية للمنافسة.</div>
+</footer>
+
+<!-- سلة المشتريات الجانبية -->
+<div class="overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="سلة المشتريات">
+  <div class="cart-panel">
+    <div class="cart-head"><h2>سلة المشتريات</h2><button class="icon-btn" id="closeCart" aria-label="إغلاق">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>الإجمالي</span><span id="cartTotal">0 ر.س</span></div>
+    <button class="btn" id="checkoutBtn" style="width:100%">إتمام الطلب الآن</button>
+    <p class="note">انتقل لخطوة الدفع الوهمية لإتمام طلبك.</p>
+  </div>
+</div>
+
+<!-- نافذة إتمام الطلب الوهمية -->
+<div class="overlay" id="checkoutModal" role="dialog">
+  <div class="checkout-box">
+    <h2>📦 إتمام الطلب التجريبي</h2>
+    <p style="color:var(--muted); font-size:0.9rem; margin-bottom:15px;">أدخل بيانات الشحن الوهمية لإتمام محاكاة الطلب:</p>
+    <form id="checkoutForm" onsubmit="submitOrder(event)">
+      <input type="text" placeholder="الاسم الكامل" required class="checkout-input">
+      <input type="tel" placeholder="رقم الجوال (مثال: 055...) " required class="checkout-input">
+      <input type="text" placeholder="المدينة / الحي" required class="checkout-input">
+      <button type="submit" class="btn" style="width:100%; margin-top:10px;">تأكيد الطلب 🚀</button>
+    </form>
+    <button class="icon-btn" id="closeCheckout" style="width:100%; margin-top:10px; background:var(--panel2);">إلغاء</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<!-- ترتيب تحميل ملفات الجافاسكريبت حسب الاعتمادية -->
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
